@@ -63,6 +63,7 @@ typedef NS_ENUM(NSInteger, _ScrollingDirection) {
         _panPressGestureRecognizer = [[UIPanGestureRecognizer alloc]
                                       initWithTarget:self action:@selector(handlePanGesture:)];
         _panPressGestureRecognizer.delegate = self;
+        _panPressGestureRecognizer.maximumNumberOfTouches = 1;
 
         [_collectionView addGestureRecognizer:_panPressGestureRecognizer];
         
