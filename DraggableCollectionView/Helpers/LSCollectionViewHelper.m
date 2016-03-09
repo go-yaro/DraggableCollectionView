@@ -218,8 +218,8 @@ typedef NS_ENUM(NSInteger, _ScrollingDirection) {
         return;
     }
     
-    NSIndexPath *indexPath = [self indexPathForItemClosestToPoint:[sender locationInView:self.collectionView]];
-    
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:[sender locationInView:self.collectionView]];
+        
     switch (sender.state) {
         case UIGestureRecognizerStateBegan: {
             if (indexPath == nil) {
